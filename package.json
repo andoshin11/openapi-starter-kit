@@ -1,9 +1,16 @@
 {
-  "name": "openapi-template",
+  "name": "openapi-starter-kit",
   "version": "1.0.0",
   "main": "index.js",
   "author": "andoshin11 <shinglish11@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andoshin11/openapi-starter-kit.git"
+  },
   "scripts": {
     "build": "swagpack build ./src/index.yml -o ./spec.yml",
     "watch": "swagpack build ./src/index.yml -o ./spec.yml -w ./src",
