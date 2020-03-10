@@ -1,0 +1,17 @@
+{
+  "name": "openapi-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "andoshin11 <shinglish11@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "swagpack build ./src/index.yml -o ./spec.yml",
+    "watch": "swagpack build ./src/index.yml -o ./spec.yml -w ./src",
+    "lint": "yarn run build && lint-openapi ./spec.yml"
+  },
+  "devDependencies": {
+    "ibm-openapi-validator": "^0.24.2",
+    "js-yaml": "^3.13.1",
+    "swagpack": "^0.0.5"
+  }
+}
