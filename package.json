@@ -1,7 +1,8 @@
 {
   "name": "openapi-starter-kit",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "andoshin11 <shinglish11@gmail.com>",
   "license": "MIT",
   "publishConfig": {
@@ -15,10 +16,17 @@
     "build": "swagpack build ./src/index.yml -o ./spec.yml",
     "watch": "swagpack build ./src/index.yml -o ./spec.yml -w ./src",
     "lint": "yarn run build && lint-openapi ./spec.yml",
-    "gen:request": "yarn run build && request-gen generate ./spec.yml -d requests"
+    "gen:request": "yarn run build && request-gen generate ./spec.yml -d requests",
+    "prepare": "yarn run gen:request && tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint"
+    }
   },
   "devDependencies": {
     "@squelette/request-gen": "^1.1.0",
+    "husky": "^4.2.3",
     "ibm-openapi-validator": "^0.24.2",
     "swagpack": "^0.0.5",
     "typescript": "^3.8.3"

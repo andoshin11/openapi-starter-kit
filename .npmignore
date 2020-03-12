@@ -1,0 +1,11 @@
+node_modules
+docker
+lib
+src
+*.log
+.DS_Store
+.validaterc
+docker-compose.yml
+spec.yml
+tsconfig.json
+.npmrc
