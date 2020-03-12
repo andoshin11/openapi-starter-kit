@@ -1,5 +1,5 @@
 {
-  "name": "openapi-starter-kit",
+  "name": "@andoshin11/openapi-starter-kit",
   "version": "0.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
