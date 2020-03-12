@@ -14,10 +14,13 @@
   "scripts": {
     "build": "swagpack build ./src/index.yml -o ./spec.yml",
     "watch": "swagpack build ./src/index.yml -o ./spec.yml -w ./src",
-    "lint": "yarn run build && lint-openapi ./spec.yml"
+    "lint": "yarn run build && lint-openapi ./spec.yml",
+    "gen:request": "yarn run build && request-gen generate ./spec.yml -d requests"
   },
   "devDependencies": {
+    "@squelette/request-gen": "^1.1.0",
     "ibm-openapi-validator": "^0.24.2",
-    "swagpack": "^0.0.5"
+    "swagpack": "^0.0.5",
+    "typescript": "^3.8.3"
   }
 }
